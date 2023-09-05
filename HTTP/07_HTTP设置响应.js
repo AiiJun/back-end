@@ -14,10 +14,10 @@ const server = http.createServer((request,response) => {
     //3.1 同名响应头
     // response.setHeader('test',['a','b','c']);
     //4.响应体的设置
-    response.write('love');
-    response.write('love');
-    response.write('love');
-    response.write('love');
+    response.write('love 4\r\n');
+    response.write('love 3\r\n');
+    response.write('love 2\r\n');
+    response.write('love 1\r\n');
     response.end();// 设置响应体
     // response.end('love');// 设置响应体
     // response.end('response');// 设置响应体
