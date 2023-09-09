@@ -11,13 +11,14 @@ app.use((req, res, next) => {
   let referer = req.get("referer");
   if (referer) {
     //实例化
-    let url = new URL(referer);
+    // let url = new URL(referer);
     //获取 hostname
-    let hostname = url.hostname;
+    // let hostname = url.hostname;
+    let { hostname } = new URL(referer);
     //判断
     if (hostname !== "127.0.0.1") {
       //响应404
-      res.status(404).send("404 not Found");
+      res.status(404).send("<h1>404 not Found</h1>");
       return;
     }
   }
