@@ -1,16 +1,14 @@
 var express = require("express");
 var router = express.Router();
-//导入lowdb
-const low = require("lowdb");
 //导入moment
 const moment = require("moment");
 
-const AccountModel = require("../model/AccountModel");
+const AccountModel = require("../../model/AccountModel");
 
 //测试moment
 console.log(moment(new Date()).toDate());
 //格式化日期对象
-console.log(moment(new Date()).format("YYYY-MM-DD"));
+// console.log(moment(new Date()).format("YYYY-MM-DD"));
 
 //记账本的列表
 router.get("/", function (req, res, next) {

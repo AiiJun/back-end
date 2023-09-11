@@ -11,8 +11,7 @@ module.exports = function (success, error) {
       console.log("连接失败");
     };
   }
-  //1.安装 mongoose
-  //2.导入 mongoose
+  //2.安装导入 mongoose
   const mongoose = require("mongoose");
   //导入 配置文件config.js
   const { DBHOST, DBPORT, DBNAME } = require("../config/config.js");
