@@ -1,11 +1,18 @@
 var express = require("express");
-var router = express.Router();
 //导入moment
 const moment = require("moment");
 const AccountModel = require("../../model/AccountModel");
-
 //导入中间件检测登录
 const checkLoginMiddleware = require("../../middlewares/checkLoginMiddleware");
+
+//创建路由对象
+var router = express.Router();
+
+//添加首页的路由规则
+router.get("/account", (req, res) => {
+  //重定向
+  res.redirect("/");
+});
 
 //测试moment
 console.log(moment(new Date()).toDate());
